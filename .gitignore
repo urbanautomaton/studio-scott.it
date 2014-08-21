@@ -1,0 +1,7 @@
+*.log
+tmp/
+.*.swo
+.*.swp
+.sass-cache
+output/
+.env

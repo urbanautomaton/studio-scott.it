@@ -1,0 +1,63 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+@import "compass/css3/opacity";
+@import "compass/reset";
+
+$background : #fff;
+
+$body-font-family:  'Merriweather', Georgia, Palatino, Times, 'Times New Roman', sans-serif;
+$body-text-color:   #444;
+$body-text-size:    1em;
+
+$highlight-blue: #84BEE8;
+
+$header-font-family:  'Open Sans', Helvetica, Arial, sans-serif;
+$header-text-color:   #222;
+
+$code-font-family:  Monaco, Consolas, monospace;
+$code-inline-size:  0.95em;
+$code-pre-size:     0.825em;
+$code-inline-bg:    #f4f4f4;
+
+$break-small: 540px;
+$break-large: 700px;
+
+// usage: @include respond-to(small-screens) { [some_rules] }
+@mixin respond-to($media) {
+  @if $media == small-screens {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large + 1) { @content; }
+  }
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  background:   $background;
+  font-size:    $body-text-size;
+  font-family:  $body-font-family;
+  color:        $body-text-color;
+}
+
+h1, h2, h3, h4, h5 {
+  color:        $header-text-color;
+  font-family:  $header-font-family;
+  font-weight:  bold;
+}
+
+pre, code { font-family:  $code-font-family; }
+code      { font-size:    $code-inline-size; }
+pre       { font-size:    $code-pre-size;    }
+
+a { text-decoration: none; }
+
+em, strong { font-weight: bold; }

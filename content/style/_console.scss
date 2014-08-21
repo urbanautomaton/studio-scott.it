@@ -1,0 +1,52 @@
+$console_bg: transparent;
+$console_fg: $body-text-color;
+$cursor_on: $console_fg;
+$cursor_off: transparent;
+
+#console {
+  background-color: $console_bg;
+  color: $console-fg;
+  position: relative;
+  width: 700px;
+  height: 500px;
+}
+
+.jqconsole-cursor {
+  font-size: 1.15em;
+  &:before {
+    content: "_";
+  }
+  .jqconsole-blurred & {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
+  }
+  color: $cursor_on;
+  -webkit-animation: blink 1s cubic-bezier(1,0,0,1) 0s infinite;
+  -moz-animation: blink 1s cubic-bezier(1,0,0,1) 0s infinite;
+  -ms-animation: blink 1s cubic-bezier(1,0,0,1) 0s infinite;
+  -o-animation: blink 1s cubic-bezier(1,0,0,1) 0s infinite;
+}
+
+@-webkit-keyframes blink {
+  0%   { color: $cursor_on;  }
+  100% { color: $cursor_off; }
+}
+
+@-moz-keyframes blink {
+  0%   { color: $cursor_on;  }
+  100% { color: $cursor_off; }
+}
+
+@-ms-keyframes blink {
+  0%   { color: $cursor_on;  }
+  100% { color: $cursor_off; }
+}
+
+@-o-keyframes blink {
+  0%   { color: $cursor_on;  }
+  100% { color: $cursor_off; }
+}
+
+
