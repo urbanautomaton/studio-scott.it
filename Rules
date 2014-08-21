@@ -27,7 +27,15 @@ end
 compile '/javascript/*/' do
 end
 
+compile '/files/images/photos/*/' do
+  filter :thumbnailize, :width => 640
+end
+
 compile '/files/*/' do
+end
+
+compile '/files/images/photos/*/', :rep => :thumbnail do
+  filter :thumbnailize, :width => 200
 end
 
 compile '*' do
@@ -55,6 +63,10 @@ end
 
 route '/files/*/' do
   [item.identifier.chop.gsub(/^\/files/,""), item[:extension]].compact.join(".")
+end
+
+route '/files/images/photos/*/', :rep => :thumbnail do
+  item.identifier.chop.gsub(%r{/files},"") + "-tn." + item[:extension]
 end
 
 route '*' do
