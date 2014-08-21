@@ -1,8 +1,6 @@
 ---
-title: About
+title: About your hosts
 ---
-
-## About your hosts
 
 Scottish-Italian couple Alison and Pino have made their home in Le
 Marche for the last 10 years, swapping the bustle of Milan for fields of
