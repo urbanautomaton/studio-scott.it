@@ -21,8 +21,8 @@ $code-inline-size:  0.95em;
 $code-pre-size:     0.825em;
 $code-inline-bg:    #f4f4f4;
 
-$break-small: 540px;
-$break-large: 700px;
+$break-small: 640px;
+$break-large: 840px;
 
 // usage: @include respond-to(small-screens) { [some_rules] }
 @mixin respond-to($media) {

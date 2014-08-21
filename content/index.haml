@@ -2,6 +2,9 @@
 title: Casa Uno
 ---
 
+%a{ :href => photos.first.path }
+  %img{ :src => photos.first.path(:rep => :thumbnail), :class => "right flow" }
+
 :markdown
   A warm welcome awaits you in this beautiful art-filled B&B in the heart of
   Le Marche.
@@ -18,6 +21,6 @@ title: Casa Uno
   Casa Uno is the perfect base for exploring Le Marche and discovering its
   treasures: scenic, cultural and gastronomic.
 
-- photos.each do |img|
+- photos.reverse.each do |img|
   %a{ :href => img.path }
     %img{ :src => img.path(:rep => :thumbnail), :class => "gallery" }

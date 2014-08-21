@@ -10,12 +10,16 @@ $startModularScaleAt: 3;
 .blog-text {
   padding: 2em;
 
-  @include typeup-container(1.1em, 700px, 1);
+  @include typeup-container(1.1em, 840px, 1);
 
   blockquote {
     @include border-radius(4px);
     border-left: .5em solid $highlight-blue;
     background: $code-inline-bg;
+  }
+
+  .right {
+    float: right;
   }
 
   img {
