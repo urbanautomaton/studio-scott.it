@@ -12,7 +12,7 @@ kitchen. You'll find homemade jam on the breakfast table, often made
 from the plums, peaches and apricots from the garden, along with freshly
 baked bread. 
 
-Pino and Alison and immersed themselves in the local communities of San
+Pino and Alison have immersed themselves in the local communities of San
 Costanzo and Fano and can recommend the best nearby eateries, sights and
 activities.
 
