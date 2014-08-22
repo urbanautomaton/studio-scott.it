@@ -2,7 +2,7 @@
 title: Casa Uno
 ---
 
-%a{ :href => photos.first.path }
+%a{ :href => photos.first.path, :class => "gallery", :rel => "gal1" }
   %img{ :src => photos.first.path(:rep => :thumbnail), :class => "right flow" }
 
 :markdown
@@ -21,6 +21,6 @@ title: Casa Uno
   Casa Uno is the perfect base for exploring Le Marche and discovering its
   treasures: scenic, cultural and gastronomic.
 
-- photos.reverse.each do |img|
-  %a{ :href => img.path }
+- photos.drop(1).each do |img|
+  %a{ :href => img.path, :class => "gallery", :rel => "gal1" }
     %img{ :src => img.path(:rep => :thumbnail), :class => "gallery" }

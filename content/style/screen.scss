@@ -2,8 +2,8 @@
 @import "text";
 @import "fonts";
 @import "sidebar";
+@import "colorbox";
 @import "solarized";
-@import "console";
 
 body {
   @include respond-to(small-screens) {

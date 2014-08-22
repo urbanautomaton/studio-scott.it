@@ -1,4 +1,4 @@
 $(function () {
-  // Nuffink yet
+  $('a.gallery').colorbox({rel: "gal1"});
 });
 
