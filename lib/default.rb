@@ -4,8 +4,7 @@
 def site_sections(current)
   [
     ['home',   '/',        ('active' if current.identifier == '/')],
-    # ['blog',   '/blog/',   ('active' if current.identifier =~ /^\/blog/)],
-    # ['code',   '/code/',   ('active' if current.identifier =~ /^\/code/)],
+    ['prices', '/prices',  ('active' if current.identifier =~ /^\/prices/)],
     ['about',  '/about/',  ('active' if current.identifier =~ /^\/about/)],
   ]
 end
